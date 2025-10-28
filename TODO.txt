@@ -1,0 +1,3 @@
+Create apollo submodules for each kyma module (including a single chart)
+Create the Kyma Runtime module containing all charts with the option to turn them on/off
+Automation to register new versions in Apollo
