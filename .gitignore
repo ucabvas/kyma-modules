@@ -1,0 +1,30 @@
+# Downloaded manifest files (regenerated via --download)
+*-manager.yaml
+*-operator.yaml
+*-cr.yaml
+*-default-cr.yaml
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+
+# Generated charts
+charts/
+test-charts/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

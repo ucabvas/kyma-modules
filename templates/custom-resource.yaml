@@ -1,0 +1,8 @@
+{{- if .Values.customResource.enabled }}
+apiVersion: {{ .Values.customResource.apiVersion | default "{api_version}" }}
+kind: {{ .Values.customResource.kind | default "{kind}" }}
+metadata:
+  name: {{ .Values.customResource.metadata.name | default "{name}" }}
+  namespace: {{ .Release.Namespace }}
+{spec_section}
+{{- end }}

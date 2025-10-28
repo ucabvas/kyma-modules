@@ -1,0 +1,59 @@
+modules:
+  - name: istio
+    repo: kyma-project/istio
+    manager_file: istio-manager.yaml
+    cr_file: istio-default-cr.yaml
+    description: "Istio service mesh integration for Kyma"
+    chart_version: "1.0.0"
+    namespace_labels:
+      apollo.palantir.com/env-id: {{ .Values.apollo.environment.id }}
+      com.palantir.namespaces.apollo-environment-id: {{ .Values.apollo.environment.id }}
+
+  - name: keda
+    repo: kyma-project/keda-manager
+    manager_file: keda-manager.yaml
+    cr_file: keda-default-cr.yaml
+    description: "KEDA autoscaling integration for Kyma"
+    chart_version: "1.0.0"
+
+  - name: serverless
+    repo: kyma-project/serverless
+    manager_file: serverless-operator.yaml
+    cr_file: default-serverless-cr.yaml
+    description: "Serverless functions runtime for Kyma"
+    chart_version: "1.0.0"
+
+  - name: telemetry
+    repo: kyma-project/telemetry-manager
+    manager_file: telemetry-manager.yaml
+    cr_file: telemetry-default-cr.yaml
+    description: "Telemetry and observability for Kyma"
+    chart_version: "1.0.0"
+
+  - name: nats
+    repo: kyma-project/nats-manager
+    manager_file: nats-manager.yaml
+    cr_file: nats-default-cr.yaml
+    description: "NATS messaging system for Kyma"
+    chart_version: "1.0.0"
+
+  - name: eventing
+    repo: kyma-project/eventing-manager
+    manager_file: eventing-manager.yaml
+    cr_file: eventing-default-cr.yaml
+    description: "Event-driven architecture support for Kyma"
+    chart_version: "1.0.0"
+
+  - name: api-gateway
+    repo: kyma-project/api-gateway
+    manager_file: api-gateway-manager.yaml
+    cr_file: apigateway-default-cr.yaml
+    description: "API Gateway for Kyma"
+    chart_version: "1.0.0"
+
+  - name: btp-manager
+    repo: kyma-project/btp-manager
+    manager_file: btp-manager.yaml
+    cr_file: null  # Not available in releases
+    description: "SAP BTP integration for Kyma"
+    chart_version: "1.0.0"
